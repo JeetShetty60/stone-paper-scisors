@@ -1,0 +1,223 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #333; /* Default text color */
+    background: linear-gradient(135deg, #8dff58, #2575fc); /* Cool gradient background */
+}
+
+/* Navigation styling */
+nav {
+    height: 15vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #ff6f61, #deba74); /* Enhanced gradient */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.3); /* Subtle border */
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
+    color: #fff; /* White text color for navigation */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+nav h1 {
+    font-size: 2.5rem; /* Larger font size for better visibility */
+    font-weight: 700; /* Bold font weight */
+    text-align: center;
+    letter-spacing: 1px; /* Slightly increased letter spacing */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Shadow for text */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Hover effect for nav */
+nav:hover {
+    background: linear-gradient(to right, #ff2727, #ff80ff); /* Slightly different gradient on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increased shadow on hover */
+}
+
+nav:hover h1 {
+    color: #fff; /* Maintain text color on hover for contrast */
+}
+
+/* Main content styling */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(85vh - 20px); /* Adjust height to accommodate padding */
+    width: 100vw;
+    padding: 10px; /* Reduced padding for smaller screens */
+}
+
+/* Button styling */
+button {
+    height: 150px; /* Default size for larger screens */
+    width: 150px;  /* Default size for larger screens */
+    border-radius: 50%;
+    border: none;
+    background: linear-gradient(to bottom right, #d0d0d0, #c0c0c0); /* Gradient background */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, border 0.3s ease; /* Smooth transitions for background and border */
+    font-size: 1.5rem; /* Font size for button text/icons */
+    color: #333; /* Default button text color */
+}
+
+button:hover {
+    background: linear-gradient(to bottom right, #b0b0b0, #a0a0a0); /* Slightly darker gradient on hover */
+    border: 3px solid black; /* Increased border width on hover */
+}
+
+i {
+    font-size: 2rem; /* Default icon size */
+    transition: transform 0.3s ease; /* Smooth transition for icon transformation */
+}
+
+button:hover i {
+    transform: scale(1.1); /* Slightly scale up the icon on hover */
+}
+
+/* Grid for buttons */
+.grid {
+    display: flex;
+    gap: 20px; /* Default gap */
+    margin-bottom: 20px;
+}
+
+/* Container for message */
+.container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#msg {
+    font-size: 1.2rem; /* Font size for message text */
+    color: #ffffff; /* Slightly lighter color for message text */
+    transition: color 0.3s ease; /* Smooth transition for text color */
+}
+
+/* Score section styling */
+.score {
+    display: flex;
+    justify-content: space-between; /* Space between scores */
+    align-items: center;
+    width: 100%;
+    max-width: 500px; /* Responsive max-width */
+    margin: 0 auto; /* Center the score section horizontally */
+    font-size: 1rem; /* Default font size */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+}
+
+.score div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 30px; /* Increased margin to add gap between scores */
+    padding: 10px; /* Padding around each score item */
+    border-radius: 10px; /* Rounded corners for visual appeal */
+    background: linear-gradient(145deg, #f0f0f0, #e0e0e0); /* Light gradient background */
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition for background and scaling */
+}
+
+.score div:hover {
+    background: linear-gradient(145deg, #e0e0e0, #d0d0d0); /* Slightly darker gradient on hover */
+    transform: scale(1.05); /* Slightly scale up the score item on hover */
+}
+
+.score span {
+    display: block;
+    font-size: 2rem; /* Larger font size for scores */
+    color: #000; /* Color for score numbers */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.score p {
+    margin-top: 5px;
+    font-size: 1rem; /* Font size for labels */
+    color: #666; /* Slightly lighter color for labels */
+}
+
+/* Ensure the whole page fits within the viewport without overflow */
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    button {
+        height: 120px;
+        width: 120px;
+        font-size: 1.2rem; /* Adjust font size for button text/icons */
+    }
+
+    i {
+        font-size: 1.5rem;
+    }
+
+    .grid {
+        gap: 15px;
+    }
+
+    .score {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    .score span {
+        font-size: 1.5rem; /* Adjust score font size */
+    }
+
+    .score p {
+        font-size: 0.9rem; /* Adjust label font size */
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        height: 100px;
+        width: 100px;
+        font-size: 1rem; /* Further adjust font size for button text/icons */
+    }
+
+    i {
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        gap: 10px;
+    }
+
+    .score {
+        flex-direction: column; /* Stack score items vertically on small screens */
+        font-size: 0.8rem; /* Further adjust font size for very small screens */
+        max-width: 90%; /* Make score section fit better on small screens */
+    }
+
+    .score div {
+        margin: 10px 0; /* Vertical margin for stacked items */
+    }
+
+    .score span {
+        font-size: 1.2rem; /* Adjust score font size */
+    }
+
+    .score p {
+        font-size: 0.8rem; /* Adjust label font size */
+    }
+}
